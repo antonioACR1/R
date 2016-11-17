@@ -35,3 +35,23 @@ chisq.test(a_table)
 ##Therefore, we reject the null hypothesis, which means that there is a possible relation between the manufacturers and the country in 
 ##which they are selling.
 
+
+##The following is to compute a probability using normal distribution in R.
+
+
+##Suppose that I have 1 000 000 clients and their average spending in  one day is 100 dollars with standard deviation equal to 35.
+
+## If I draw a sample of 75 clients by simple random sampling, then by the central limit theorem I can assume that the normal distribution
+##of the mean is approximated by the normal distribution.
+
+##what is the probability that the average spending in one day of my sample of 75 clients is greater than or equal than 110 dollars?
+
+##The solution is to compute the area under the normal distribution corresponding to the following data: the area is between the random 
+##variable = 110 and infinity, the mean of the sampling distribution coincides with the mean of the population which is equal to 100, 
+##and the standard deviation of the sampling distribution which is the standard deviation of the population divided by the square root 
+##of the sample. The following will compute the required probability
+
+x <- 35/sqrt(75)
+pnorm(110,mean=100, sd=x, lower.tail=FALSE)
+
+##The probability is less than 1%, which makes sense intuitively.
