@@ -67,7 +67,7 @@ str(df4)
 t.test(df4$Units,mu=1.5)
 
 #The p-value is less than 0.05, which means that we should reject the null hypothesis.
-
+#
 
 
 
